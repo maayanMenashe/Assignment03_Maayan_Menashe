@@ -14,7 +14,7 @@ public abstract class Enemy : Character
     #region Functions
 
     // abstract functions
-    public abstract void Attack(ref int playerHp);
+    public abstract void Attack(ref Player player);
     
     #endregion
 

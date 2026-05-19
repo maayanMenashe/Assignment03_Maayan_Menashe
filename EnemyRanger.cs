@@ -27,7 +27,7 @@ public class EnemyRanger : Enemy
     // Public
     
     // Attacks, "plays animation" (implemented as printing on console) of the apropriate enemy type, and updates player HP if hits.
-    public override void Attack(ref int playerHp)
+    public override void Attack(ref Player player)
     {
         // Attack anim
         Console.WriteLine("Ranger enemy did an awsome shooting animation with lots of fire and shi...");
@@ -36,8 +36,8 @@ public class EnemyRanger : Enemy
         {
             // hit anim and update player hp if hit
             Console.WriteLine("And hit!");
-            playerHp -= damage;
-            Console.WriteLine($"Player now has {playerHp} HP!");
+            player.Hp -= damage;
+            Console.WriteLine($"Player now has {player.Hp} HP!");
         }
         else
         {
