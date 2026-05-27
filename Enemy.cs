@@ -26,7 +26,4 @@ public abstract class Enemy : Character
     }
     
     #endregion
-
-    
-
 }
