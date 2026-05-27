@@ -8,13 +8,31 @@ public abstract class Enemy : Character
     // Protected variables
     protected int damage;
     protected int accuracy;
+    protected string enemyType;
+    protected string attackType;
 
     #endregion
 
     #region Functions
 
-    // abstract functions
-    public abstract void Attack(ref Player player);
+    public void Attack(Player player)
+    {
+        // Attack anim
+        Console.WriteLine($"{enemyType} enemy attacks the player with a {attackType} attack!");
+        // Check if hit
+        if (Utils.CheckRng(accuracy))
+        {
+            // hit anim and update player hp if hit
+            Console.WriteLine("And hits...");
+            player.TakeDamage(damage);
+            Console.WriteLine($"Player now has {player.CurrentHp} HP!");
+        }
+        else
+        {
+            // apropriate dodge anim if miss
+            Console.WriteLine($"The player avoided the {attackType} attack!");
+        }
+    }
     
     #endregion
 

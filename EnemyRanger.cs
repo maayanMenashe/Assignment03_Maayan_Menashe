@@ -18,33 +18,15 @@ public class EnemyRanger : Enemy
     {
         damage = rangerDamage;
         accuracy = rangerAcc;
+        enemyType = "Ranger";
+        attackType = "Bow";
     }
 
     #endregion
 
     #region Functions
     
-    // Public
-    
-    // Attacks, "plays animation" (implemented as printing on console) of the apropriate enemy type, and updates player HP if hits.
-    public override void Attack(ref Player player)
-    {
-        // Attack anim
-        Console.WriteLine("Ranger enemy did an awsome shooting animation with lots of fire and shi...");
-        // Check if hit
-        if (CheckRng(accuracy))
-        {
-            // hit anim and update player hp if hit
-            Console.WriteLine("And hit!");
-            player.Hp -= damage;
-            Console.WriteLine($"Player now has {player.Hp} HP!");
-        }
-        else
-        {
-            // apropriate dodge anim if miss
-            Console.WriteLine("But the player did a slow mo neo from the matrix like animation!!");
-        }
-    }
+
 
     #endregion
 }

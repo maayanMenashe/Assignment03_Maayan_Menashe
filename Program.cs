@@ -2,11 +2,22 @@
 
 using Assignment2_Maayan_Menashe;
 
-Player player = new Player();
-Enemy melee = new EnemyMelee();
-Enemy ranger = new EnemyRanger();
-Enemy bomber = new EnemyBomber();
+Player player = new Player(10);
 
-melee.Attack(ref player);
-ranger.Attack(ref player);
-bomber.Attack(ref player);
+Enemy[] allEnemies = [new EnemyMelee(), new EnemyRanger(), new EnemyBomber()];
+
+foreach (var enemy in allEnemies)
+{
+    enemy.Attack(player);
+}
+
+
+
+
+
+
+
+// dont forget to use delegate for the health funcs
+// also use lambda and anonymos funcs
+// add comments
+// change dlm

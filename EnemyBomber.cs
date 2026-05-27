@@ -18,33 +18,15 @@ public class EnemyBomber : Enemy
     {
         damage = bomberDamage;
         accuracy = bomberAcc;
+        enemyType = "Bomber";
+        attackType = "Bomb";
     }
 
     #endregion
 
     #region Functions
     
-    // Public
     
-    // Attacks, "plays animation" (implemented as printing on console) of the apropriate enemy type, and updates player HP if hits.
-    public override void Attack(ref Player player)
-    {
-        // Attack anim
-        Console.WriteLine("Bomber enemy screams 'EXUPULOSION!!!!!!!!!!!!!!'");
-        // Check if hit
-        if (CheckRng(accuracy))
-        {
-            // hit anim and update player hp if hit
-            Console.WriteLine("BOOMMMMMMMM!");
-            player.Hp -= damage;
-            Console.WriteLine($"Player now has {player.Hp} HP!");
-        }
-        else
-        {
-            // apropriate dodge anim if miss
-            Console.WriteLine("But the player was literally in a different place then where he was looking...");
-        }
-    }
 
     #endregion
 }
