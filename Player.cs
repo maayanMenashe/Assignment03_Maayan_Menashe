@@ -1,11 +1,21 @@
-﻿namespace Assignment2_Maayan_Menashe;
+﻿namespace Assignment03_Maayan_Menashe;
 
 // player is a character class
 public class Player : Character
 {
-    #region Variables
+    #region Delegates
+
+    public delegate void HealthChangeHandler(float newAmount, string reason);
+    public delegate void DeathHandler();
+
+    #endregion
+    
+    #region Properties
     public float CurrentHp { get; private set; }
+    
     public float MaxHp { get; init; }
+    
+    public bool IsDead { get; private set; }
 
     #endregion
 
@@ -38,6 +48,13 @@ public class Player : Character
             CurrentHp = MaxHp;
         }
     }
+
+    #endregion
+
+    #region Events
+
+    public event HealthChangeHandler OnHealthChanged;
+    public event DeathHandler OnPlayerDied;
 
     #endregion
 }

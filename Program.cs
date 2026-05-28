@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using Assignment2_Maayan_Menashe;
+using Assignment03_Maayan_Menashe;
 
 Player player = new Player(10);
 
@@ -15,8 +15,8 @@ foreach (var enemy in allEnemies)
 
 
 
-
-
+// about the events.... what he called events in the assignment sound like methods
+// check about delegate being public and inside
 // dont forget to use delegate for the health funcs
 // also use lambda and anonymos funcs
 // add comments

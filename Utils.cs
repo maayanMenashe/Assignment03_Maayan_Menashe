@@ -1,4 +1,4 @@
-﻿namespace Assignment2_Maayan_Menashe;
+﻿namespace Assignment03_Maayan_Menashe;
 
 public class Utils
 {

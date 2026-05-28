@@ -1,4 +1,4 @@
-﻿namespace Assignment2_Maayan_Menashe;
+﻿namespace Assignment03_Maayan_Menashe;
 
 // Base class for all enemy characters. is a character. abstract.
 public abstract class Enemy : Character

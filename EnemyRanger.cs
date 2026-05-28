@@ -1,4 +1,4 @@
-﻿namespace Assignment2_Maayan_Menashe;
+﻿namespace Assignment03_Maayan_Menashe;
 
 // Class for a ranger type enemy. is an enemy.
 public class EnemyRanger : Enemy
