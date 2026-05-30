@@ -15,7 +15,7 @@ public abstract class Enemy : Character
 
     #region Functions
 
-    public void Attack(Player player)
+    public void Attack(Player player, float damageAmount)
     {
         // Attack anim
         Console.WriteLine($"{enemyType} enemy attacks the player with a {attackType} attack!");
