@@ -23,10 +23,4 @@ public class EnemyRanger : Enemy
     }
 
     #endregion
-
-    #region Functions
-    
-
-
-    #endregion
 }

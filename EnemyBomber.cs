@@ -23,10 +23,4 @@ public class EnemyBomber : Enemy
     }
 
     #endregion
-
-    #region Functions
-    
-    
-
-    #endregion
 }

@@ -23,10 +23,4 @@ public class EnemyMelee : Enemy
     }
 
     #endregion
-
-    #region Functions
-    
-
-
-    #endregion
 }

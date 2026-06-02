@@ -14,43 +14,29 @@ public abstract class Enemy : Character
     #endregion
 
     #region Functions
-
-    public void Attack(Player player)
-    {
-        // Attack anim
-        Console.WriteLine($"{enemyType} enemy attacks the player with a {attackType} attack!");
-        // Check if hit
-        if (Utils.CheckRng(accuracy))
-        {
-            // hit anim and update player hp if hit
-            Console.WriteLine("And hits...");
-            player.TakeDamage(damage);
-            Console.WriteLine($"Player now has {player.CurrentHp} HP!");
-        }
-        else
-        {
-            // apropriate dodge anim if miss
-            Console.WriteLine($"The player avoided the {attackType} attack!");
-        }
+    
+    // Makes the player take the amount of damage that is passed down
+    public void Attack(Player player, float damageAmount)
+    { 
+        player.TakeDamage(damageAmount);
     }
     
-    public void Attack(Player player, float damageAmount)
+    // Makes the player take the amount of damage that that enemy deals
+    public void Attack(Player player)
     {
-        // Attack anim
-        Console.WriteLine($"{enemyType} enemy attacks the player with a {attackType} attack!");
-        // Check if hit
-        if (Utils.CheckRng(accuracy))
-        {
-            // hit anim and update player hp if hit
-            Console.WriteLine("And hits...");
-            player.TakeDamage(damageAmount);
-            Console.WriteLine($"Player now has {player.CurrentHp} HP!");
-        }
-        else
-        {
-            // apropriate dodge anim if miss
-            Console.WriteLine($"The player avoided the {attackType} attack!");
-        }
+        Attack(player, damage);
+    }
+
+    // Plays victory animation of this enemy
+    public void PlayVictoryAnim()
+    {
+        Console.WriteLine($"{enemyType} enemy plays a victory animation!");
+    }
+
+    // Everything that the enemy does when the player dies (just plays victory anim)
+    public void OnPlayerDeath()
+    {
+        PlayVictoryAnim();
     }
     
     #endregion
