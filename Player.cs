@@ -53,8 +53,8 @@ public class Player : Character
 
     #region Events
 
-    public event HealthChangeHandler OnHealthChanged;
-    public event DeathHandler OnPlayerDied;
+    public event HealthChangeHandler HpChanged;
+    public event DeathHandler PlayerDied;
 
     #endregion
 }

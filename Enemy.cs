@@ -15,7 +15,7 @@ public abstract class Enemy : Character
 
     #region Functions
 
-    public void Attack(Player player, float damageAmount)
+    public void Attack(Player player)
     {
         // Attack anim
         Console.WriteLine($"{enemyType} enemy attacks the player with a {attackType} attack!");
@@ -34,13 +34,23 @@ public abstract class Enemy : Character
         }
     }
     
-    #endregion
-
-    #region Constructor
-
-    // Base parameterless constructor
-    protected Enemy()
+    public void Attack(Player player, float damageAmount)
     {
+        // Attack anim
+        Console.WriteLine($"{enemyType} enemy attacks the player with a {attackType} attack!");
+        // Check if hit
+        if (Utils.CheckRng(accuracy))
+        {
+            // hit anim and update player hp if hit
+            Console.WriteLine("And hits...");
+            player.TakeDamage(damageAmount);
+            Console.WriteLine($"Player now has {player.CurrentHp} HP!");
+        }
+        else
+        {
+            // apropriate dodge anim if miss
+            Console.WriteLine($"The player avoided the {attackType} attack!");
+        }
     }
     
     #endregion
